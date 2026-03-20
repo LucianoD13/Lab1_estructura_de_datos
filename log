@@ -338,3 +338,21 @@ exercises.c:59:16: error: assignment to ‘int’ from ‘void *’ makes intege
    59 |       elemento = next(L);
       |                ^
 cabaa56
+Fri Mar 20 06:28:38 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:56:21: error: implicit declaration of function ‘Front’ [-Wimplicit-function-declaration]
+   56 |    void* elemento = Front(L);
+      |                     ^~~~~
+exercises.c:56:21: error: initialization of ‘void *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+exercises.c:57:19: error: comparison between pointer and integer [-Werror]
+   57 |    while(elemento != -1){
+      |                   ^~
+exercises.c:58:12: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   58 |       suma += elemento;
+      |            ^~
+cc1: all warnings being treated as errors
+5b8ae03
