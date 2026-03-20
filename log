@@ -24,3 +24,15 @@ exercises.c:88:7: error: implicit declaration of function ‘push_back’; did y
       |       pushBack
 cc1: all warnings being treated as errors
 f5b20c6
+Fri Mar 20 05:56:47 PM UTC 2026: 
+ exercises.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:79:24: error: implicit declaration of function ‘CreateStack’; did you mean ‘create_stack’? [-Wimplicit-function-declaration]
+   79 |    Stack* P_auxiliar = CreateStack();
+      |                        ^~~~~~~~~~~
+      |                        create_stack
+exercises.c:79:24: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+04bac78
