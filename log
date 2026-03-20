@@ -186,3 +186,26 @@ exercises.c:59:16: error: assignment to ‘int’ from ‘void *’ makes intege
       |                ^
 cc1: all warnings being treated as errors
 30b7e52
+Fri Mar 20 06:15:59 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:56:19: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   56 |    int elemento = first(L);
+      |                   ^~~~~
+exercises.c:57:19: error: comparison between pointer and integer [-Werror]
+   57 |    while(elemento != NULL){
+      |                   ^~
+exercises.c:59:11: error: passing argument 1 of ‘pop’ makes pointer from integer without a cast [-Wint-conversion]
+   59 |       pop(elemento);
+      |           ^~~~~~~~
+      |           |
+      |           int
+In file included from exercises.c:7:
+stack.h:17:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int’
+   17 | void *pop(Stack *stack) { return popFront(stack); }
+      |           ~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+15ccc31
