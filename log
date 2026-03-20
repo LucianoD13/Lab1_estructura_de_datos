@@ -223,3 +223,13 @@ exercises.c:57:19: error: comparison between pointer and integer [-Werror]
       |                   ^~
 cc1: all warnings being treated as errors
 bdef8f9
+Fri Mar 20 06:20:28 PM UTC 2026: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:58:15: error: expected expression before ‘int’
+   58 |       suma += int(elemento);
+      |               ^~~
+71829f5
