@@ -263,3 +263,21 @@ exercises.c:59:16: error: assignment to ‘int’ from ‘void *’ makes intege
       |                ^
 cc1: all warnings being treated as errors
 c4ebfcd
+Fri Mar 20 06:24:20 PM UTC 2026: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:56:19: error: implicit declaration of function ‘Front’ [-Wimplicit-function-declaration]
+   56 |    int elemento = Front(L);
+      |                   ^~~~~
+exercises.c:57:19: error: comparison between pointer and integer [-Werror]
+   57 |    while(elemento != NULL){
+      |                   ^~
+exercises.c:59:18: error: implicit declaration of function ‘Next’; did you mean ‘next’? [-Wimplicit-function-declaration]
+   59 |       elemento = Next(L);
+      |                  ^~~~
+      |                  next
+cc1: all warnings being treated as errors
+84b418d
