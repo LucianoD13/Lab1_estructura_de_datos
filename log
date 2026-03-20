@@ -85,3 +85,20 @@ exercises.c:58:12: error: assignment to ‘int’ from ‘int *’ makes integer
    58 |       suma += elemento;
       |            ^~
 ddd9a4e
+Fri Mar 20 06:10:03 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:56:19: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   56 |    int elemento = first(L);
+      |                   ^~~~~
+exercises.c:57:19: error: comparison between pointer and integer [-Werror]
+   57 |    while(elemento != NULL){
+      |                   ^~
+exercises.c:59:16: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   59 |       elemento = next(L);
+      |                ^
+cc1: all warnings being treated as errors
+0a849a5
