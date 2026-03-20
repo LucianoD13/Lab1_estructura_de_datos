@@ -2,3 +2,25 @@ Fri Mar 20 05:38:04 PM UTC 2026:
  tests:  0|5
 total_score: 0/70
 ad94241
+Fri Mar 20 05:50:51 PM UTC 2026: 
+ exercises.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:79:24: error: implicit declaration of function ‘crearPila’ [-Wimplicit-function-declaration]
+   79 |    Stack* P_auxiliar = crearPila();
+      |                        ^~~~~~~~~
+exercises.c:79:24: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+exercises.c:80:18: error: comparison between pointer and integer [-Werror]
+   80 |    while(top(P1) != -1){
+      |                  ^~
+exercises.c:86:26: error: comparison between pointer and integer [-Werror]
+   86 |    while(top(P_auxiliar) != -1){
+      |                          ^~
+exercises.c:88:7: error: implicit declaration of function ‘push_back’; did you mean ‘pushBack’? [-Wimplicit-function-declaration]
+   88 |       push_back(P1, elemento);
+      |       ^~~~~~~~~
+      |       pushBack
+cc1: all warnings being treated as errors
+f5b20c6
