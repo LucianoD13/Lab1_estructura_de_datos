@@ -102,3 +102,16 @@ exercises.c:59:16: error: assignment to ‘int’ from ‘void *’ makes intege
       |                ^
 cc1: all warnings being treated as errors
 0a849a5
+Fri Mar 20 06:11:28 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:58:12: error: invalid operands to binary + (have ‘void *’ and ‘void *’)
+   58 |       suma += elemento;
+      |            ^~
+exercises.c:61:11: error: returning ‘void *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Wint-conversion]
+   61 |    return suma;
+      |           ^~~~
+930d367
