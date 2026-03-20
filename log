@@ -115,3 +115,20 @@ exercises.c:61:11: error: returning ‘void *’ from a function with return typ
    61 |    return suma;
       |           ^~~~
 930d367
+Fri Mar 20 06:11:51 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:56:19: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   56 |    int elemento = first(L);
+      |                   ^~~~~
+exercises.c:57:19: error: comparison between pointer and integer [-Werror]
+   57 |    while(elemento != NULL){
+      |                   ^~
+exercises.c:59:16: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   59 |       elemento = next(L);
+      |                ^
+cc1: all warnings being treated as errors
+8b5aece
