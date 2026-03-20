@@ -65,3 +65,13 @@ exercises.c:47:12: error: unused variable ‘elemento’ [-Werror=unused-variabl
       |            ^~~~~~~~
 cc1: all warnings being treated as errors
 4949427
+Fri Mar 20 06:09:16 PM UTC 2026: 
+ exercises.c | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:58:12: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   58 |       suma += elemento;
+      |            ^~
+cef7f40
