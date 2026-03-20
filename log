@@ -132,3 +132,17 @@ exercises.c:59:16: error: assignment to ‘int’ from ‘void *’ makes intege
       |                ^
 cc1: all warnings being treated as errors
 8b5aece
+Fri Mar 20 06:12:09 PM UTC 2026: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:56:19: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   56 |    int elemento = first(L);
+      |                   ^~~~~
+exercises.c:57:19: error: comparison between pointer and integer [-Werror]
+   57 |    while(elemento != NULL){
+      |                   ^~
+cc1: all warnings being treated as errors
+1339748
