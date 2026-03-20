@@ -48,3 +48,20 @@ Fri Mar 20 05:58:14 PM UTC 2026:
  tests:  1|4
 total_score: 10/70
 6e31513
+Fri Mar 20 06:05:58 PM UTC 2026: 
+ exercises.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:48:8: error: invalid use of undefined type ‘struct List’
+   48 |       L[i] = i + 1;
+      |        ^
+exercises.c:48:12: error: invalid use of incomplete typedef ‘List’
+   48 |       L[i] = i + 1;
+      |            ^
+exercises.c:47:12: error: unused variable ‘elemento’ [-Werror=unused-variable]
+   47 |       int* elemento = malloc(sizeof(int*));
+      |            ^~~~~~~~
+cc1: all warnings being treated as errors
+4949427
