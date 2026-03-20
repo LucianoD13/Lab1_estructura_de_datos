@@ -325,3 +325,16 @@ exercises.c:59:18: error: implicit declaration of function ‘Next’; did you m
       |                  ^~~~
       |                  next
 2acfc24
+Fri Mar 20 06:28:16 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:56:19: error: implicit declaration of function ‘Front’ [-Wimplicit-function-declaration]
+   56 |    int elemento = Front(L);
+      |                   ^~~~~
+exercises.c:59:16: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   59 |       elemento = next(L);
+      |                ^
+cabaa56
