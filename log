@@ -156,3 +156,16 @@ exercises.c:58:12: error: assignment to ‘int’ from ‘int *’ makes integer
    58 |       suma += elemento;
       |            ^~
 f7824e9
+Fri Mar 20 06:13:43 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:58:12: error: invalid operands to binary + (have ‘int *’ and ‘int *’)
+   58 |       suma += elemento;
+      |            ^~
+exercises.c:61:11: error: returning ‘int *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Wint-conversion]
+   61 |    return suma;
+      |           ^~~~
+cfd5777
