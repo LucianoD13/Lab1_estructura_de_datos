@@ -1869,3 +1869,21 @@ arraylist.c:37:6: error: ‘pushFront’ defined but not used [-Werror=unused-fu
       |      ^~~~~~~~~
 cc1: all warnings being treated as errors
 4131366
+Sun Mar 22 08:15:57 PM UTC 2026: 
+ exercises.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:127:22: error: implicit declaration of function ‘top_stack’ [-Wimplicit-function-declaration]
+  127 |          char *top = top_stack(pila);
+      |                      ^~~~~~~~~
+exercises.c:127:22: error: initialization of ‘char *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+exercises.c:132:55: error: expected ‘;’ before ‘else’
+  132 |          if(*top == '[' && cadena[i] == ']') pop(pila)
+      |                                                       ^
+      |                                                       ;
+  133 | 
+  134 |          else return 0;
+      |          ~~~~                                          
+190171b
