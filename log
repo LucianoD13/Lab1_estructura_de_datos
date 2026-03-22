@@ -608,3 +608,31 @@ Sun Mar 22 07:18:27 PM UTC 2026:
  tests:  7|1
 total_score: 60/70
 fd39ebc
+Sun Mar 22 07:28:28 PM UTC 2026: 
+ exercises.c | 20 ++++++++++++++------
+ 1 file changed, 14 insertions(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:125:92: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  125 |       if((cadena[i] == '(') || (cadena[i] == '{') || (cadena[i] == '[')) push(pila1, cadena[i]);
+      |                                                                                      ~~~~~~^~~
+      |                                                                                            |
+      |                                                                                            char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:126:92: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  126 |       if((cadena[i] == ')') || (cadena[i] == '}') || (cadena[i] == ']')) push(pila2, cadena[i]);
+      |                                                                                      ~~~~~~^~~
+      |                                                                                            |
+      |                                                                                            char
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:132:27: error: comparison between pointer and integer [-Werror]
+  132 |    while((pila1 || pila2) != NULL){
+      |                           ^~
+cc1: all warnings being treated as errors
+accff4e
