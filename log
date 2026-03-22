@@ -568,3 +568,23 @@ exercises.c:122:8: error: unused variable ‘par1’ [-Werror=unused-variable]
       |        ^~~~
 cc1: all warnings being treated as errors
 228f8bf
+Sun Mar 22 07:12:09 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:125:27: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  125 |       if(cadena[i] == ('(', '{', '[')) par1++;
+      |                           ^
+exercises.c:125:32: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  125 |       if(cadena[i] == ('(', '{', '[')) par1++;
+      |                                ^
+exercises.c:126:27: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  126 |       if(cadena[i] == (')', '}', ']')) par2++;
+      |                           ^
+exercises.c:126:32: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  126 |       if(cadena[i] == (')', '}', ']')) par2++;
+      |                                ^
+cc1: all warnings being treated as errors
+d275bcb

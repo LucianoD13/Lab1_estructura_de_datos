@@ -120,7 +120,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) {
    int par1 = 0;
-   int par2 = 0;+
+   int par2 = 0;
    for(int i = 0; cadena[i] != '\0'; i++){
       if(cadena[i] == ('(', '{', '[')) par1++;
       if(cadena[i] == (')', '}', ']')) par2++;
