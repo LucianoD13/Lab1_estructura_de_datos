@@ -664,3 +664,94 @@ exercises.c:132:27: error: comparison between pointer and integer [-Werror]
       |                           ^~
 cc1: all warnings being treated as errors
 53a675a
+Sun Mar 22 07:47:41 PM UTC 2026: 
+ exercises.c | 23 ++++++++++++-----------
+ 1 file changed, 12 insertions(+), 11 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:4: error: unknown type name ‘L’
+  122 |    L* lista1 = create_stack();
+      |    ^
+exercises.c:122:16: error: initialization of ‘int *’ from incompatible pointer type ‘Stack *’ {aka ‘List *’} [-Wincompatible-pointer-types]
+  122 |    L* lista1 = create_stack();
+      |                ^~~~~~~~~~~~
+exercises.c:123:4: error: unknown type name ‘L’
+  123 |    L* lista2 = create_stack();
+      |    ^
+exercises.c:123:16: error: initialization of ‘int *’ from incompatible pointer type ‘Stack *’ {aka ‘List *’} [-Wincompatible-pointer-types]
+  123 |    L* lista2 = create_stack();
+      |                ^~~~~~~~~~~~
+exercises.c:125:79: error: passing argument 1 of ‘push’ from incompatible pointer type [-Wincompatible-pointer-types]
+  125 |       if((cadena[i] == '(') || (cadena[i] == '{') || (cadena[i] == '[')) push(lista1, &cadena[i]);
+      |                                                                               ^~~~~~
+      |                                                                               |
+      |                                                                               int *
+In file included from exercises.c:7:
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+exercises.c:126:79: error: passing argument 1 of ‘push’ from incompatible pointer type [-Wincompatible-pointer-types]
+  126 |       if((cadena[i] == ')') || (cadena[i] == '}') || (cadena[i] == ']')) push(lista2, &cadena[i]);
+      |                                                                               ^~~~~~
+      |                                                                               |
+      |                                                                               int *
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+exercises.c:129:24: error: passing argument 1 of ‘first’ from incompatible pointer type [-Wincompatible-pointer-types]
+  129 |    void* elem1 = first(lista1);
+      |                        ^~~~~~
+      |                        |
+      |                        int *
+In file included from exercises.c:6:
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘int *’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+exercises.c:130:24: error: passing argument 1 of ‘first’ from incompatible pointer type [-Wincompatible-pointer-types]
+  130 |    void* elem2 = first(lista2);
+      |                        ^~~~~~
+      |                        |
+      |                        int *
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘int *’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+exercises.c:131:27: error: comparison between pointer and integer [-Werror]
+  131 |    while((elem1 || elem2) != NULL){
+      |                           ^~
+exercises.c:132:16: error: comparison between pointer and integer [-Werror]
+  132 |       if(elem1 == '(' && elem2 != ')') return 0;
+      |                ^~
+exercises.c:132:32: error: comparison between pointer and integer [-Werror]
+  132 |       if(elem1 == '(' && elem2 != ')') return 0;
+      |                                ^~
+exercises.c:133:16: error: comparison between pointer and integer [-Werror]
+  133 |       if(elem1 == '{' && elem2 != '}') return 0;
+      |                ^~
+exercises.c:133:32: error: comparison between pointer and integer [-Werror]
+  133 |       if(elem1 == '{' && elem2 != '}') return 0;
+      |                                ^~
+exercises.c:134:16: error: comparison between pointer and integer [-Werror]
+  134 |       if(elem1 == '[' && elem2 != ']') return 0;
+      |                ^~
+exercises.c:134:32: error: comparison between pointer and integer [-Werror]
+  134 |       if(elem1 == '[' && elem2 != ']') return 0;
+      |                                ^~
+exercises.c:135:20: error: passing argument 1 of ‘next’ from incompatible pointer type [-Wincompatible-pointer-types]
+  135 |       elem1 = next(lista1);
+      |                    ^~~~~~
+      |                    |
+      |                    int *
+arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘int *’
+   14 | void* next(List *L);
+      |            ~~~~~~^
+exercises.c:136:20: error: passing argument 1 of ‘next’ from incompatible pointer type [-Wincompatible-pointer-types]
+  136 |       elem2 = next(lista2);
+      |                    ^~~~~~
+      |                    |
+      |                    int *
+arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘int *’
+   14 | void* next(List *L);
+      |            ~~~~~~^
+cc1: all warnings being treated as errors
+be80b27

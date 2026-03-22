@@ -119,21 +119,21 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   Stack* pila1 = create_stack();
-   Stack* pila2 = create_stack();
+   L* lista1 = create_stack();
+   L* lista2 = create_stack();
    for(int i = 0; cadena[i] != '\0'; i++){
-      if((cadena[i] == '(') || (cadena[i] == '{') || (cadena[i] == '[')) push(pila1, &cadena[i]);
-      if((cadena[i] == ')') || (cadena[i] == '}') || (cadena[i] == ']')) push(pila2, &cadena[i]);
+      if((cadena[i] == '(') || (cadena[i] == '{') || (cadena[i] == '[')) push(lista1, &cadena[i]);
+      if((cadena[i] == ')') || (cadena[i] == '}') || (cadena[i] == ']')) push(lista2, &cadena[i]);
    }
 
-   void* elem1 = top(pila1);
-   void* elem2 = top(pila2);
-
-   while((pila1 || pila2) != NULL){
-      if(elem1 != elem2) return 0;
-      pop(pila1);
-      pop(pila2);
+   void* elem1 = first(lista1);
+   void* elem2 = first(lista2);
+   while((elem1 || elem2) != NULL){
+      if(elem1 == '(' && elem2 != ')') return 0;
+      if(elem1 == '{' && elem2 != '}') return 0;
+      if(elem1 == '[' && elem2 != ']') return 0;
+      elem1 = next(lista1);
+      elem2 = next(lista2);
    }
    return 1;
 }
-
