@@ -1898,3 +1898,16 @@ exercises.c:127:22: error: implicit declaration of function ‘top_stack’ [-Wi
       |                      ^~~~~~~~~
 exercises.c:127:22: error: initialization of ‘char *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
 d6a5c90
+Sun Mar 22 08:16:54 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:127:22: error: called object ‘top’ is not a function or function pointer
+  127 |          char *top = top(pila);
+      |                      ^~~
+exercises.c:127:16: note: declared here
+  127 |          char *top = top(pila);
+      |                ^~~
+bd9067d
