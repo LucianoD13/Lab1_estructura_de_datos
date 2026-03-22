@@ -545,3 +545,9 @@ exercises.c:125:28: error: ‘par2’ undeclared (first use in this function)
   125 |       if(cadena[i] == ')') par2++;
       |                            ^~~~
 5db311b
+Sun Mar 22 05:50:08 PM UTC 2026: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  7|1
+total_score: 60/70
+4b05df7
