@@ -503,3 +503,19 @@ arraylist.h:32:24: note: expected ‘List *’ but argument is of type ‘int *�
    32 | void *popCurrent(List *L);
       |                  ~~~~~~^
 62dc3e0
+Sun Mar 22 05:19:36 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:84:21: error: passing argument 1 of ‘popCurrent’ makes pointer from integer without a cast [-Wint-conversion]
+   84 |          popCurrent(*elemento);
+      |                     ^~~~~~~~~
+      |                     |
+      |                     int
+In file included from exercises.c:6:
+arraylist.h:32:24: note: expected ‘List *’ but argument is of type ‘int’
+   32 | void *popCurrent(List *L);
+      |                  ~~~~~~^
+d3a4263
