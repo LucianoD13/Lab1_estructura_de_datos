@@ -458,3 +458,32 @@ arraylist.h:32:24: note: expected ‘List *’ but argument is of type ‘int *�
       |                  ~~~~~~^
 cc1: all warnings being treated as errors
 f9d190b
+Sun Mar 22 05:18:41 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:80:19: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   80 |    int elemento = first(L);
+      |                   ^~~~~
+exercises.c:81:19: error: comparison between pointer and integer [-Werror]
+   81 |    while(elemento != NULL){
+      |                   ^~
+exercises.c:82:37: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   82 |       if(elemento != elem) elemento = next(L);
+      |                                     ^
+exercises.c:84:21: error: passing argument 1 of ‘popCurrent’ makes pointer from integer without a cast [-Wint-conversion]
+   84 |          popCurrent(elemento);
+      |                     ^~~~~~~~
+      |                     |
+      |                     int
+In file included from exercises.c:6:
+arraylist.h:32:24: note: expected ‘List *’ but argument is of type ‘int’
+   32 | void *popCurrent(List *L);
+      |                  ~~~~~~^
+exercises.c:85:19: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   85 |          elemento = next(L);
+      |                   ^
+cc1: all warnings being treated as errors
+67e1565
