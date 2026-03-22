@@ -387,3 +387,29 @@ Fri Mar 20 06:32:54 PM UTC 2026:
  tests:  2|3
 total_score: 20/70
 31f7b6a
+Sun Mar 22 05:09:41 PM UTC 2026: 
+ exercises.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:47:19: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   47 |       int valor = malloc(sizeof(int));
+      |                   ^~~~~~
+exercises.c:48:16: error: comparison between pointer and integer [-Werror]
+   48 |       if(valor == NULL) exit(EXIT_FAILURE);
+      |                ^~
+exercises.c:49:7: error: invalid type argument of unary ‘*’ (have ‘int’)
+   49 |       *valor = i + 1;
+      |       ^~~~~~
+exercises.c:50:15: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+   50 |       push(L, valor);
+      |               ^~~~~
+      |               |
+      |               int
+In file included from exercises.c:7:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+5d7a5e9
