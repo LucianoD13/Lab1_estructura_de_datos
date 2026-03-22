@@ -419,3 +419,18 @@ Sun Mar 22 05:10:54 PM UTC 2026:
  tests:  3|2
 total_score: 30/70
 994ef67
+Sun Mar 22 05:16:38 PM UTC 2026: 
+ exercises.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:80:21: error: implicit declaration of function ‘front’ [-Wimplicit-function-declaration]
+   80 |    void* elemento = front(L);
+      |                     ^~~~~
+exercises.c:80:21: error: initialization of ‘void *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+exercises.c:82:19: error: comparison between pointer and integer [-Werror]
+   82 |       if(elemento != elem) elemento = next(L);
+      |                   ^~
+cc1: all warnings being treated as errors
+5784669
