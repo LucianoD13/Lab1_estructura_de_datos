@@ -1911,3 +1911,9 @@ exercises.c:127:16: note: declared here
   127 |          char *top = top(pila);
       |                ^~~
 bd9067d
+Sun Mar 22 08:17:45 PM UTC 2026: 
+ exercises.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+ tests:  4|1
+total_score: 50/70
+5d7b338
